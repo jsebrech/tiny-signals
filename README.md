@@ -2,7 +2,7 @@
 
 The tiniest implementation of signals, ideal for vanilla JavaScript projects.
 
-Baed loosely on the [signals API](https://preactjs.com/guide/v10/signals/) of Preact.
+Based loosely on the [signals API](https://preactjs.com/guide/v10/signals/) of Preact.
 
 ## Usage
 
@@ -29,6 +29,7 @@ API:
 
 - `const mySignal = signal(val)`: creates a signal.
 - `mySignal.value`: get or set the signal's value
-- `mySignal.effect(fn)`: call the function every time the signal's value changes, also call it initially
+- `const dispose = mySignal.effect(fn)`: call the function every time the signal's value changes, also call it initially. The `dispose()` function unregisters the effect from the signal.
 - `const result = computed(() => 'hello ' + mySignal.value, [mySignal])`: create a signal that is computed from other signals and values by a function,
 and will automatically update when the value of a dependency changes
+- `mySignal.addEventListener('change', fn)`: subscribe to changes without calling the function initially

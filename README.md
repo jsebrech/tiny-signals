@@ -33,3 +33,11 @@ API:
 - `const result = computed(() => 'hello ' + mySignal.value, [mySignal])`: create a signal that is computed from other signals and values by a function,
 and will automatically update when the value of a dependency changes
 - `mySignal.addEventListener('change', fn)`: subscribe to changes without calling the function initially
+
+## Example
+
+Run a static server:
+
+`npx http-server .`
+
+Browse to http://localhost:8080/example/adder.html

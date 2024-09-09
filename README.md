@@ -4,6 +4,8 @@ The tiniest implementation of signals, ideal for vanilla JavaScript projects.
 
 Based loosely on the [signals API](https://preactjs.com/guide/v10/signals/) of Preact.
 
+Part of the [Plain Vanilla Web](https://plainvanillaweb.com) project.
+
 ## Usage
 
 Copy `signals.js` into your project.

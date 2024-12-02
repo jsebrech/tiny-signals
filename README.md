@@ -43,3 +43,7 @@ Run a static server:
 `npx http-server .`
 
 Browse to http://localhost:8080/example/adder.html
+
+## Other versions
+
+Typescript: [felixranesberger/tiny-signals-ts](https://github.com/felixranesberger/tiny-signals-ts)

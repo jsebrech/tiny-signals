@@ -1,0 +1,21 @@
+{
+  "name": "@jsebrech/tiny-signals",
+  "version": "1.0.0",
+  "description": "The tiniest implementation of signals, ideal for vanilla JavaScript projects.",
+  "main": "signals.js",
+  "type": "module",
+  "scripts": {
+    "start": "npx http-server .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsebrech/tiny-signals.git"
+  },
+  "author": "Joeri Sebrechts <joeri@sebrechts.net>",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/jsebrech/tiny-signals/issues"
+  },
+  "homepage": "https://github.com/jsebrech/tiny-signals#readme"
+}

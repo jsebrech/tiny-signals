@@ -8,6 +8,8 @@ Part of the [Plain Vanilla Web](https://plainvanillaweb.com) project.
 
 ## Usage
 
+### Without NPM
+
 Copy `signals.js` into your project.
 
 Use it like this:
@@ -27,7 +29,18 @@ name.value = 'John';
 // -> John Doe
 ```
 
-API:
+### With NPM
+
+Run `npm install @jsebrech/tiny-signals`
+
+Use it like this:
+
+```js
+import { signal, computed } from '@jsebrech/tiny-signals';
+// ...
+```
+
+### API
 
 - `const mySignal = signal(val)`: creates a signal.
 - `mySignal.value`: get or set the signal's value

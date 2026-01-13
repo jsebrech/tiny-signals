@@ -2,7 +2,7 @@ export class Signal extends EventTarget {
     #value;
     get value () { return this.#value; }
     set value (value) {
-        if (this.#value === value) return;
+        if (this.equals(value)) return;
         this.#value = value;
         this.dispatchEvent(new CustomEvent('change')); 
     }
@@ -10,6 +10,10 @@ export class Signal extends EventTarget {
     constructor (value) {
         super();
         this.#value = value;
+    }
+
+    equals (value) {
+        return this.#value === value;
     }
 
     effect(fn) {

@@ -13,9 +13,16 @@ export class Signal extends EventTarget {
     }
 
     effect(fn) {
-        fn();
-        this.addEventListener('change', fn);
-        return () => this.removeEventListener('change', fn);
+        const controller = new AbortController()
+        const cleanup = () => controller.abort()
+
+        fn(cleanup)
+        this.addEventListener(
+            'change',
+            () => fn(cleanup), { signal: controller.signal }
+        )
+
+        return cleanup
     }
 
     valueOf () { return this.#value; }
